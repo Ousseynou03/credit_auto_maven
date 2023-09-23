@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.9.6 on darwin)" generated="20230914 23:32:01.283" rpa="false" schemaversion="4">
+<suite id="s1" name="Run Credit Auto" source="/Users/mac/Desktop/QA Testing/Automatisation Tests/Automatisation_test_Credit_Auto_Robot_Framework/tests/run_credit_auto.robot">
+<test id="s1-t1" name="Connexion en tant que administrateur" line="13">
+<kw name="Ouvrir le navigateur" library="selenium_utils" type="SETUP">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230914 23:32:01.601" level="INFO">Opening browser 'Safari' to base url 'http://credit-auto.qsiconseil.ma/'.</msg>
+<status status="PASS" starttime="20230914 23:32:01.600" endtime="20230914 23:32:03.720"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230914 23:32:03.722" endtime="20230914 23:32:03.753"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Exécution de test démarrée sur ${browser}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230914 23:32:03.753" endtime="20230914 23:32:03.754"/>
+</kw>
+<status status="PASS" starttime="20230914 23:32:01.598" endtime="20230914 23:32:03.754"/>
+</kw>
+<kw name="Accéder à Crédit Auto" library="page_connexion">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${champ_acces_CA}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230914 23:32:03.761" level="INFO">Clicking link 'xpath://*[@id="lnkAccesCreditAuto"]'.</msg>
+<status status="PASS" starttime="20230914 23:32:03.758" endtime="20230914 23:32:03.869"/>
+</kw>
+<status status="PASS" starttime="20230914 23:32:03.755" endtime="20230914 23:32:03.870"/>
+</kw>
+<kw name="Se Connecter en tant que LDAP administrateur" library="page_connexion">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Se Connecter en tant que LDAP administrateur</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230914 23:32:03.871" endtime="20230914 23:32:03.871"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${champ_username}</arg>
+<arg>${username_LDAP_ADMIN}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230914 23:32:03.876" level="INFO">Typing text 'acd' into text field 'xpath://*[@id="username"]'.</msg>
+<msg timestamp="20230914 23:32:04.767" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230914 23:32:04.767" level="FAIL">Element with locator 'xpath://*[@id="username"]' not found.</msg>
+<status status="FAIL" starttime="20230914 23:32:03.872" endtime="20230914 23:32:04.778"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${champ_password}</arg>
+<arg>${password_LDAP_ADMIN}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230914 23:32:04.778" endtime="20230914 23:32:04.778"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${btn_Se_Connecter}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230914 23:32:04.778" endtime="20230914 23:32:04.778"/>
+</kw>
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>${champ_nom_utilisateur}</arg>
+<arg>${username_LDAP_ADMIN}</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="NOT RUN" starttime="20230914 23:32:04.778" endtime="20230914 23:32:04.778"/>
+</kw>
+<status status="FAIL" starttime="20230914 23:32:03.870" endtime="20230914 23:32:04.778"/>
+</kw>
+<kw name="Se déconnecter de CREDIT AUTO" library="page_connexion">
+<status status="NOT RUN" starttime="20230914 23:32:04.779" endtime="20230914 23:32:04.779"/>
+</kw>
+<kw name="Fermer le navigateur" library="selenium_utils" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230914 23:32:04.779" endtime="20230914 23:32:04.998"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Fin de l'exécution de test</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230914 23:32:04.999" endtime="20230914 23:32:04.999"/>
+</kw>
+<status status="PASS" starttime="20230914 23:32:04.779" endtime="20230914 23:32:04.999"/>
+</kw>
+<status status="FAIL" starttime="20230914 23:32:01.597" endtime="20230914 23:32:04.999">Element with locator 'xpath://*[@id="username"]' not found.</status>
+</test>
+<test id="s1-t2" name="Connexion tant que LDAP administrateur avec mot de passe incorrect" line="17">
+<kw name="Ouvrir le navigateur" library="selenium_utils" type="SETUP">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230914 23:32:05.002" level="INFO">Opening browser 'Safari' to base url 'http://credit-auto.qsiconseil.ma/'.</msg>
+<status status="PASS" starttime="20230914 23:32:05.001" endtime="20230914 23:32:06.993"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230914 23:32:06.993" endtime="20230914 23:32:07.024"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Exécution de test démarrée sur ${browser}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230914 23:32:07.024" endtime="20230914 23:32:07.025"/>
+</kw>
+<status status="PASS" starttime="20230914 23:32:05.001" endtime="20230914 23:32:07.027"/>
+</kw>
+<kw name="Accéder à Crédit Auto" library="page_connexion">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${champ_acces_CA}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230914 23:32:07.031" level="INFO">Clicking link 'xpath://*[@id="lnkAccesCreditAuto"]'.</msg>
+<status status="PASS" starttime="20230914 23:32:07.030" endtime="20230914 23:32:07.107"/>
+</kw>
+<status status="PASS" starttime="20230914 23:32:07.029" endtime="20230914 23:32:07.107"/>
+</kw>
+<kw name="Se Connecter en tant que LDAP administrateur avec mot de passe incorrect" library="page_connexion">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Se Connecter en tant que LDAP administrateur mot de passe incorrect</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230914 23:32:07.108" endtime="20230914 23:32:07.109"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${champ_username}</arg>
+<arg>${username_LDAP_ADMIN}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230914 23:32:07.111" level="INFO">Typing text 'acd' into text field 'xpath://*[@id="username"]'.</msg>
+<msg timestamp="20230914 23:32:08.037" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230914 23:32:08.037" level="FAIL">Element with locator 'xpath://*[@id="username"]' not found.</msg>
+<status status="FAIL" starttime="20230914 23:32:07.109" endtime="20230914 23:32:08.037"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${champ_password}</arg>
+<arg>${password_LDAP_ADMIN_incorrect}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230914 23:32:08.037" endtime="20230914 23:32:08.037"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${btn_Se_Connecter}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230914 23:32:08.037" endtime="20230914 23:32:08.038"/>
+</kw>
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>${champ_msg_erronné}</arg>
+<arg>${msg_erroné}</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="NOT RUN" starttime="20230914 23:32:08.038" endtime="20230914 23:32:08.038"/>
+</kw>
+<status status="FAIL" starttime="20230914 23:32:07.107" endtime="20230914 23:32:08.038"/>
+</kw>
+<kw name="Fermer le navigateur" library="selenium_utils" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230914 23:32:08.039" endtime="20230914 23:32:08.257"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Fin de l'exécution de test</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230914 23:32:08.258" endtime="20230914 23:32:08.258"/>
+</kw>
+<status status="PASS" starttime="20230914 23:32:08.038" endtime="20230914 23:32:08.258"/>
+</kw>
+<status status="FAIL" starttime="20230914 23:32:05.000" endtime="20230914 23:32:08.258">Element with locator 'xpath://*[@id="username"]' not found.</status>
+</test>
+<test id="s1-t3" name="Connexion en tant RESPONSABLE CREDIT" line="21">
+<kw name="Ouvrir le navigateur" library="selenium_utils" type="SETUP">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230914 23:32:08.261" level="INFO">Opening browser 'Safari' to base url 'http://credit-auto.qsiconseil.ma/'.</msg>
+<status status="PASS" starttime="20230914 23:32:08.260" endtime="20230914 23:32:10.315"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230914 23:32:10.316" endtime="20230914 23:32:10.346"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Exécution de test démarrée sur ${browser}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230914 23:32:10.347" endtime="20230914 23:32:10.348"/>
+</kw>
+<status status="PASS" starttime="20230914 23:32:08.259" endtime="20230914 23:32:10.348"/>
+</kw>
+<kw name="Accéder à Crédit Auto" library="page_connexion">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${champ_acces_CA}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230914 23:32:10.353" level="INFO">Clicking link 'xpath://*[@id="lnkAccesCreditAuto"]'.</msg>
+<status status="PASS" starttime="20230914 23:32:10.350" endtime="20230914 23:32:10.441"/>
+</kw>
+<status status="PASS" starttime="20230914 23:32:10.349" endtime="20230914 23:32:10.441"/>
+</kw>
+<kw name="Se Connecter en tant que LDAP Responsable Credit" library="page_connexion">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Se Connecter en tant que LDAP Responsable Credit</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230914 23:32:10.445" endtime="20230914 23:32:10.446"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${champ_username}</arg>
+<arg>${username_LDAP_RESPONSABLE_CREDIT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230914 23:32:10.447" level="INFO">Typing text 'rcd' into text field 'xpath://*[@id="username"]'.</msg>
+<msg timestamp="20230914 23:32:11.208" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230914 23:32:11.209" level="FAIL">Element with locator 'xpath://*[@id="username"]' not found.</msg>
+<status status="FAIL" starttime="20230914 23:32:10.446" endtime="20230914 23:32:11.209"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${champ_password}</arg>
+<arg>${password_LDAP_RESPONSABLE_CREDIT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230914 23:32:11.209" endtime="20230914 23:32:11.209"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${btn_Se_Connecter}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230914 23:32:11.209" endtime="20230914 23:32:11.209"/>
+</kw>
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>${champ_nom_utilisateur}</arg>
+<arg>${username_LDAP_RESPONSABLE_CREDIT}</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="NOT RUN" starttime="20230914 23:32:11.209" endtime="20230914 23:32:11.209"/>
+</kw>
+<status status="FAIL" starttime="20230914 23:32:10.444" endtime="20230914 23:32:11.210"/>
+</kw>
+<kw name="Se déconnecter de CREDIT AUTO" library="page_connexion">
+<status status="NOT RUN" starttime="20230914 23:32:11.210" endtime="20230914 23:32:11.210"/>
+</kw>
+<kw name="Fermer le navigateur" library="selenium_utils" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230914 23:32:11.211" endtime="20230914 23:32:11.425"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Fin de l'exécution de test</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230914 23:32:11.425" endtime="20230914 23:32:11.426"/>
+</kw>
+<status status="PASS" starttime="20230914 23:32:11.210" endtime="20230914 23:32:11.426"/>
+</kw>
+<status status="FAIL" starttime="20230914 23:32:08.259" endtime="20230914 23:32:11.426">Element with locator 'xpath://*[@id="username"]' not found.</status>
+</test>
+<test id="s1-t4" name="Connexion en tant que RESPONSABLE CREDIT avec mot de passe incorrect" line="26">
+<kw name="Ouvrir le navigateur" library="selenium_utils" type="SETUP">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230914 23:32:11.429" level="INFO">Opening browser 'Safari' to base url 'http://credit-auto.qsiconseil.ma/'.</msg>
+<status status="PASS" starttime="20230914 23:32:11.428" endtime="20230914 23:32:13.414"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230914 23:32:13.415" endtime="20230914 23:32:13.445"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Exécution de test démarrée sur ${browser}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230914 23:32:13.445" endtime="20230914 23:32:13.447"/>
+</kw>
+<status status="PASS" starttime="20230914 23:32:11.427" endtime="20230914 23:32:13.447"/>
+</kw>
+<kw name="Accéder à Crédit Auto" library="page_connexion">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${champ_acces_CA}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230914 23:32:13.455" level="INFO">Clicking link 'xpath://*[@id="lnkAccesCreditAuto"]'.</msg>
+<status status="PASS" starttime="20230914 23:32:13.452" endtime="20230914 23:32:13.530"/>
+</kw>
+<status status="PASS" starttime="20230914 23:32:13.448" endtime="20230914 23:32:13.530"/>
+</kw>
+<kw name="Se Connecter en tant que LDAP Responsable Credit avec mot de passe incorrect" library="page_connexion">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Se Connecter en tant que LDAP Responsable Credit mot de passe incorrect</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230914 23:32:13.532" endtime="20230914 23:32:13.533"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${champ_username}</arg>
+<arg>${username_LDAP_RESPONSABLE_CREDIT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230914 23:32:13.534" level="INFO">Typing text 'rcd' into text field 'xpath://*[@id="username"]'.</msg>
+<msg timestamp="20230914 23:32:14.295" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230914 23:32:14.295" level="FAIL">Element with locator 'xpath://*[@id="username"]' not found.</msg>
+<status status="FAIL" starttime="20230914 23:32:13.533" endtime="20230914 23:32:14.295"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${champ_password}</arg>
+<arg>${password_LDAP_RESPONSABLE_CREDIT_incorrect}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230914 23:32:14.295" endtime="20230914 23:32:14.295"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${btn_Se_Connecter}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230914 23:32:14.296" endtime="20230914 23:32:14.296"/>
+</kw>
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>${champ_msg_erronné}</arg>
+<arg>${msg_erroné}</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="NOT RUN" starttime="20230914 23:32:14.296" endtime="20230914 23:32:14.296"/>
+</kw>
+<status status="FAIL" starttime="20230914 23:32:13.531" endtime="20230914 23:32:14.296"/>
+</kw>
+<kw name="Fermer le navigateur" library="selenium_utils" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230914 23:32:14.297" endtime="20230914 23:32:14.517"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Fin de l'exécution de test</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230914 23:32:14.518" endtime="20230914 23:32:14.518"/>
+</kw>
+<status status="PASS" starttime="20230914 23:32:14.296" endtime="20230914 23:32:14.518"/>
+</kw>
+<status status="FAIL" starttime="20230914 23:32:11.427" endtime="20230914 23:32:14.518">Element with locator 'xpath://*[@id="username"]' not found.</status>
+</test>
+<test id="s1-t5" name="Connexion en tant que GESTIONNAIRE CREDIT" line="30">
+<kw name="Ouvrir le navigateur" library="selenium_utils" type="SETUP">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230914 23:32:14.521" level="INFO">Opening browser 'Safari' to base url 'http://credit-auto.qsiconseil.ma/'.</msg>
+<status status="PASS" starttime="20230914 23:32:14.520" endtime="20230914 23:32:16.486"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230914 23:32:16.487" endtime="20230914 23:32:16.517"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Exécution de test démarrée sur ${browser}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230914 23:32:16.517" endtime="20230914 23:32:16.518"/>
+</kw>
+<status status="PASS" starttime="20230914 23:32:14.520" endtime="20230914 23:32:16.518"/>
+</kw>
+<kw name="Accéder à Crédit Auto" library="page_connexion">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${champ_acces_CA}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230914 23:32:16.522" level="INFO">Clicking link 'xpath://*[@id="lnkAccesCreditAuto"]'.</msg>
+<status status="PASS" starttime="20230914 23:32:16.521" endtime="20230914 23:32:16.596"/>
+</kw>
+<status status="PASS" starttime="20230914 23:32:16.519" endtime="20230914 23:32:16.596"/>
+</kw>
+<kw name="Se Connecter en tant que LDAP Gestionnaire Credit" library="page_connexion">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Se Connecter en tant que LDAP Gestionnaire Credit</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230914 23:32:16.598" endtime="20230914 23:32:16.599"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${champ_username}</arg>
+<arg>${username_LDAP_GESTIONNAIRE_CREDIT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230914 23:32:16.601" level="INFO">Typing text 'gcd' into text field 'xpath://*[@id="username"]'.</msg>
+<msg timestamp="20230914 23:32:17.372" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230914 23:32:17.372" level="FAIL">Element with locator 'xpath://*[@id="username"]' not found.</msg>
+<status status="FAIL" starttime="20230914 23:32:16.600" endtime="20230914 23:32:17.372"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${champ_password}</arg>
+<arg>${password_LDAP_GESTIONNAIRE_CREDIT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230914 23:32:17.373" endtime="20230914 23:32:17.373"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${btn_Se_Connecter}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230914 23:32:17.373" endtime="20230914 23:32:17.373"/>
+</kw>
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>${champ_nom_utilisateur}</arg>
+<arg>${username_LDAP_GESTIONNAIRE_CREDIT}</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="NOT RUN" starttime="20230914 23:32:17.373" endtime="20230914 23:32:17.373"/>
+</kw>
+<status status="FAIL" starttime="20230914 23:32:16.597" endtime="20230914 23:32:17.373"/>
+</kw>
+<kw name="Se déconnecter de CREDIT AUTO" library="page_connexion">
+<status status="NOT RUN" starttime="20230914 23:32:17.374" endtime="20230914 23:32:17.374"/>
+</kw>
+<kw name="Fermer le navigateur" library="selenium_utils" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230914 23:32:17.375" endtime="20230914 23:32:17.592"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Fin de l'exécution de test</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230914 23:32:17.592" endtime="20230914 23:32:17.593"/>
+</kw>
+<status status="PASS" starttime="20230914 23:32:17.374" endtime="20230914 23:32:17.593"/>
+</kw>
+<status status="FAIL" starttime="20230914 23:32:14.519" endtime="20230914 23:32:17.593">Element with locator 'xpath://*[@id="username"]' not found.</status>
+</test>
+<test id="s1-t6" name="Connexion en tant que GESTIONNAIRE CREDIT avec mot de passe incorrect" line="34">
+<kw name="Ouvrir le navigateur" library="selenium_utils" type="SETUP">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230914 23:32:17.596" level="INFO">Opening browser 'Safari' to base url 'http://credit-auto.qsiconseil.ma/'.</msg>
+<status status="PASS" starttime="20230914 23:32:17.595" endtime="20230914 23:32:19.548"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230914 23:32:19.549" endtime="20230914 23:32:19.579"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Exécution de test démarrée sur ${browser}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230914 23:32:19.579" endtime="20230914 23:32:19.580"/>
+</kw>
+<status status="PASS" starttime="20230914 23:32:17.594" endtime="20230914 23:32:19.580"/>
+</kw>
+<kw name="Accéder à Crédit Auto" library="page_connexion">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${champ_acces_CA}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230914 23:32:19.584" level="INFO">Clicking link 'xpath://*[@id="lnkAccesCreditAuto"]'.</msg>
+<status status="PASS" starttime="20230914 23:32:19.582" endtime="20230914 23:32:19.669"/>
+</kw>
+<status status="PASS" starttime="20230914 23:32:19.581" endtime="20230914 23:32:19.669"/>
+</kw>
+<kw name="Se Connecter en tant que LDAP Gestionnaire Credit avec mot de passe incorrect" library="page_connexion">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Se Connecter en tant que LDAP Gestionnaire Credit mot de passe incorrect</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230914 23:32:19.670" endtime="20230914 23:32:19.671"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${champ_username}</arg>
+<arg>${username_LDAP_GESTIONNAIRE_CREDIT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230914 23:32:19.672" level="INFO">Typing text 'gcd' into text field 'xpath://*[@id="username"]'.</msg>
+<msg timestamp="20230914 23:32:20.425" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-11.png"&gt;&lt;img src="selenium-screenshot-11.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230914 23:32:20.425" level="FAIL">Element with locator 'xpath://*[@id="username"]' not found.</msg>
+<status status="FAIL" starttime="20230914 23:32:19.671" endtime="20230914 23:32:20.425"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${champ_password}</arg>
+<arg>${password_LDAP_GESTIONNAIRE_CREDIT_incorrect}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230914 23:32:20.426" endtime="20230914 23:32:20.426"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${btn_Se_Connecter}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230914 23:32:20.426" endtime="20230914 23:32:20.426"/>
+</kw>
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>${champ_msg_erronné}</arg>
+<arg>${msg_erroné}</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="NOT RUN" starttime="20230914 23:32:20.426" endtime="20230914 23:32:20.426"/>
+</kw>
+<status status="FAIL" starttime="20230914 23:32:19.670" endtime="20230914 23:32:20.426"/>
+</kw>
+<kw name="Fermer le navigateur" library="selenium_utils" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230914 23:32:20.427" endtime="20230914 23:32:20.642"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Fin de l'exécution de test</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230914 23:32:20.642" endtime="20230914 23:32:20.642"/>
+</kw>
+<status status="PASS" starttime="20230914 23:32:20.426" endtime="20230914 23:32:20.642"/>
+</kw>
+<status status="FAIL" starttime="20230914 23:32:17.593" endtime="20230914 23:32:20.643">Element with locator 'xpath://*[@id="username"]' not found.</status>
+</test>
+<test id="s1-t7" name="Connexion en tant que LOUEUR" line="39">
+<kw name="Ouvrir le navigateur" library="selenium_utils" type="SETUP">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230914 23:32:20.645" level="INFO">Opening browser 'Safari' to base url 'http://credit-auto.qsiconseil.ma/'.</msg>
+<status status="PASS" starttime="20230914 23:32:20.644" endtime="20230914 23:32:22.621"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230914 23:32:22.622" endtime="20230914 23:32:22.652"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Exécution de test démarrée sur ${browser}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230914 23:32:22.653" endtime="20230914 23:32:22.654"/>
+</kw>
+<status status="PASS" starttime="20230914 23:32:20.644" endtime="20230914 23:32:22.654"/>
+</kw>
+<kw name="Accéder à Crédit Auto" library="page_connexion">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${champ_acces_CA}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230914 23:32:22.659" level="INFO">Clicking link 'xpath://*[@id="lnkAccesCreditAuto"]'.</msg>
+<status status="PASS" starttime="20230914 23:32:22.656" endtime="20230914 23:32:22.735"/>
+</kw>
+<status status="PASS" starttime="20230914 23:32:22.655" endtime="20230914 23:32:22.736"/>
+</kw>
+<kw name="Se Connecter en tant que LDAP Loueur" library="page_connexion">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Se Connecter en tant que LDAP Loueur</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230914 23:32:22.739" endtime="20230914 23:32:22.740"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${champ_username}</arg>
+<arg>${username_LDAP_LOUEUR}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230914 23:32:22.742" level="INFO">Typing text 'lcd' into text field 'xpath://*[@id="username"]'.</msg>
+<msg timestamp="20230914 23:32:23.433" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-12.png"&gt;&lt;img src="selenium-screenshot-12.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230914 23:32:23.433" level="FAIL">Element with locator 'xpath://*[@id="username"]' not found.</msg>
+<status status="FAIL" starttime="20230914 23:32:22.740" endtime="20230914 23:32:23.433"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${champ_password}</arg>
+<arg>${password_LDAP_LOUEUR}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230914 23:32:23.433" endtime="20230914 23:32:23.433"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${btn_Se_Connecter}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230914 23:32:23.433" endtime="20230914 23:32:23.434"/>
+</kw>
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>${champ_nom_utilisateur}</arg>
+<arg>${username_LDAP_LOUEUR}</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="NOT RUN" starttime="20230914 23:32:23.434" endtime="20230914 23:32:23.434"/>
+</kw>
+<status status="FAIL" starttime="20230914 23:32:22.737" endtime="20230914 23:32:23.434"/>
+</kw>
+<kw name="Se déconnecter de CREDIT AUTO" library="page_connexion">
+<status status="NOT RUN" starttime="20230914 23:32:23.434" endtime="20230914 23:32:23.434"/>
+</kw>
+<kw name="Fermer le navigateur" library="selenium_utils" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230914 23:32:23.435" endtime="20230914 23:32:23.447"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Fin de l'exécution de test</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230914 23:32:23.447" endtime="20230914 23:32:23.447"/>
+</kw>
+<status status="PASS" starttime="20230914 23:32:23.434" endtime="20230914 23:32:23.448"/>
+</kw>
+<status status="FAIL" starttime="20230914 23:32:20.643" endtime="20230914 23:32:23.448">Element with locator 'xpath://*[@id="username"]' not found.</status>
+</test>
+<test id="s1-t8" name="Connexion en tant que LOUEUR avec mot de passe incorrect" line="43">
+<kw name="Ouvrir le navigateur" library="selenium_utils" type="SETUP">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230914 23:32:23.452" level="INFO">Opening browser 'Safari' to base url 'http://credit-auto.qsiconseil.ma/'.</msg>
+<status status="PASS" starttime="20230914 23:32:23.451" endtime="20230914 23:32:25.539"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230914 23:32:25.539" endtime="20230914 23:32:25.570"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Exécution de test démarrée sur ${browser}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230914 23:32:25.571" endtime="20230914 23:32:25.572"/>
+</kw>
+<status status="PASS" starttime="20230914 23:32:23.450" endtime="20230914 23:32:25.572"/>
+</kw>
+<kw name="Accéder à Crédit Auto" library="page_connexion">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${champ_acces_CA}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230914 23:32:25.579" level="INFO">Clicking link 'xpath://*[@id="lnkAccesCreditAuto"]'.</msg>
+<status status="PASS" starttime="20230914 23:32:25.577" endtime="20230914 23:32:25.651"/>
+</kw>
+<status status="PASS" starttime="20230914 23:32:25.573" endtime="20230914 23:32:25.652"/>
+</kw>
+<kw name="Se Connecter en tant que LDAP Loueur avec mot de passe incorrect" library="page_connexion">
+<kw name="Log To Console" library="BuiltIn">
+<arg>Se Connecter en tant que LDAP Loueur mot de passe incorrect</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230914 23:32:25.653" endtime="20230914 23:32:25.653"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${champ_username}</arg>
+<arg>${username_LDAP_LOUEUR}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230914 23:32:25.654" level="INFO">Typing text 'lcd' into text field 'xpath://*[@id="username"]'.</msg>
+<msg timestamp="20230914 23:32:26.349" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-13.png"&gt;&lt;img src="selenium-screenshot-13.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230914 23:32:26.349" level="FAIL">Element with locator 'xpath://*[@id="username"]' not found.</msg>
+<status status="FAIL" starttime="20230914 23:32:25.653" endtime="20230914 23:32:26.349"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${champ_password}</arg>
+<arg>${password_LDAP_LOUEUR_incorrect}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230914 23:32:26.349" endtime="20230914 23:32:26.349"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${btn_Se_Connecter}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230914 23:32:26.349" endtime="20230914 23:32:26.349"/>
+</kw>
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>${champ_msg_erronné}</arg>
+<arg>${msg_erroné}</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="NOT RUN" starttime="20230914 23:32:26.350" endtime="20230914 23:32:26.350"/>
+</kw>
+<status status="FAIL" starttime="20230914 23:32:25.652" endtime="20230914 23:32:26.350"/>
+</kw>
+<kw name="Fermer le navigateur" library="selenium_utils" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230914 23:32:26.351" endtime="20230914 23:32:26.360"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>Fin de l'exécution de test</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230914 23:32:26.360" endtime="20230914 23:32:26.360"/>
+</kw>
+<status status="PASS" starttime="20230914 23:32:26.350" endtime="20230914 23:32:26.361"/>
+</kw>
+<status status="FAIL" starttime="20230914 23:32:23.449" endtime="20230914 23:32:26.361">Element with locator 'xpath://*[@id="username"]' not found.</status>
+</test>
+<status status="FAIL" starttime="20230914 23:32:01.287" endtime="20230914 23:32:26.362"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="8" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="8" skip="0" id="s1" name="Run Credit Auto">Run Credit Auto</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
