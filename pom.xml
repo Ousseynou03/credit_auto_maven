@@ -22,9 +22,9 @@
         </dependency>
 
         <dependency>
-            <groupId>com.github.markusbernhardt</groupId>
-            <artifactId>robotframework-selenium2library-java</artifactId>
-            <version>1.4.0.7</version>
+            <groupId>com.github.marketsquare</groupId>
+            <artifactId>robotframework-seleniumlibrary</artifactId>
+            <version>4.0.0.0</version>
             <scope>test</scope>
             <exclusions>
                 <exclusion>
