@@ -1,0 +1,4 @@
+1695481946784	geckodriver	INFO	Listening on 127.0.0.1:43005
+/snap/firefox/current/firefox.launcher: 60: exec: /snap/intellij-idea-ultimate/451/usr/lib/firefox/firefox: not found
+1695481947378	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/sna ... te" "--remote-debugging-port" "52635" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileueFSuQ"
+/snap/firefox/current/firefox.launcher: 60: exec: /snap/intellij-idea-ultimate/451/usr/lib/firefox/firefox: not found
