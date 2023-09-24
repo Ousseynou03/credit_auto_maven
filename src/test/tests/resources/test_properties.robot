@@ -1,6 +1,6 @@
 *** Variables ***
 ${url}  http://credit-auto.qsiconseil.ma/
 
-${browser}  Chrome
-#${browser}  Firefox
+#${browser}  Chrome
+${browser}  Firefox
 
