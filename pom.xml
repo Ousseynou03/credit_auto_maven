@@ -56,7 +56,7 @@
                     <arguments>
                         <argument>--server-args=-screen 0,1920x1080x24</argument>
                         <argument>robot</argument>
-                        <argument>${project.basedir}/src/test/tests/</argument>
+                        <argument>${project.basedir}/src/test/tests/run_credit_auto.robot</argument>
                         <!-- Ajoutez d'autres arguments pour spécifier les options de votre test -->
                     </arguments>
                 </configuration>
