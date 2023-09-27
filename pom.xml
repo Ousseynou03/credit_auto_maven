@@ -39,28 +39,30 @@
 
     <build>
         <plugins>
-
+            <!-- ... autres plugins ... -->
             <plugin>
-                <groupId>org.robotframework</groupId>
-                <artifactId>robotframework-maven-plugin</artifactId>
-                <version>2.1.0</version> <!-- Assurez-vous de spécifier la version correcte du plugin -->
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.0.0</version> <!-- Utilisez la version la plus récente du plugin -->
                 <executions>
                     <execution>
-                        <id>run-tests</id>
-                        <phase>test</phase> <!-- Exécution des tests Robot Framework lors de la phase de test -->
                         <goals>
-                            <goal>run</goal>
+                            <goal>exec</goal>
                         </goals>
-                        <configuration>
-                            <testCasesDirectory>${project.basedir}/src/test/tests</testCasesDirectory>
-                            <!-- Autres configurations ici si nécessaire -->
-                        </configuration>
                     </execution>
                 </executions>
+                <configuration>
+                    <executable>xvfb-run</executable>
+                    <arguments>
+                        <argument>--server-args=-screen 0,1920x1080x24</argument>
+                        <argument>robot</argument>
+                        <argument>${project.basedir}/src/test/tests/</argument>
+                        <!-- Ajoutez d'autres arguments pour spécifier les options de votre test -->
+                    </arguments>
+                </configuration>
             </plugin>
         </plugins>
-
-        </build>
+    </build>
 
 
 
