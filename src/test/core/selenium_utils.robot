@@ -4,12 +4,12 @@ Library    SeleniumLibrary
 
 *** Variables ***
 
-${chromium_path}    /usr/bin/chromium
+${chromedriver_path}    /usr/local/bin/chromedriver
 
 *** Keywords ***
 Ouvrir le navigateur
     [Arguments]      ${url}     ${browser}
-    Open Browser    ${url}    ${browser}    executable_path=${chromium_path}    remote_url=http://139.99.130.158/
+    Open Browser    ${url}    ${browser}    executable_path=${chromedriver_path}
     maximize browser window
     Log To Console    Exécution de test démarrée sur ${browser}
 
