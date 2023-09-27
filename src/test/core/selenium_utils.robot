@@ -5,7 +5,7 @@ Library    SeleniumLibrary
 *** Variables ***
 
 #${chromedriver_path}    /usr/local/bin/chromedriver
-${options}        --headless
+${options}        headless
 
 *** Keywords ***
 Ouvrir le navigateur
