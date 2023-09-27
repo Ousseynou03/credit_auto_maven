@@ -4,14 +4,14 @@ Library    SeleniumLibrary
 
 *** Variables ***
 
-#${chromedriver_path}    /usr/local/bin/chromedriver
+${chromedriver_path}    /usr/bin/chromedriver
 ${options}        headless
 
 *** Keywords ***
 Ouvrir le navigateur
     [Arguments]      ${url}     ${browser}
-    #Open Browser    ${url}    ${browser}    executable_path=${chromedriver_path}
-    Open Browser    ${url}    ${browser}    options=${options}
+    Open Browser    ${url}    ${browser}    executable_path=${chromedriver_path}
+    #Open Browser    ${url}    ${browser}    options=${options}
     maximize browser window
     Log To Console    Exécution de test démarrée sur ${browser}
 
