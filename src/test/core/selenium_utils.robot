@@ -7,7 +7,7 @@ Library    SeleniumLibrary
 *** Keywords ***
 Ouvrir le navigateur
     [Arguments]      ${url}     ${browser}
-    Open Browser    ${url}    ${browser}
+    Open Browser    ${url}    ${browser}    options=headless
     maximize browser window
     Log To Console    Exécution de test démarrée sur ${browser}
 
