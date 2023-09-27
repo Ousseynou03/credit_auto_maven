@@ -2,5 +2,5 @@
 ${url}  http://credit-auto.qsiconseil.ma/
 
 #${browser}  Chrome
-${browser}  Firefox
+${browser}  firefox
 
