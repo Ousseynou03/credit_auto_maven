@@ -9,7 +9,7 @@ ${chromium_path}    /usr/bin/chromium
 *** Keywords ***
 Ouvrir le navigateur
     [Arguments]      ${url}     ${browser}
-    Open Browser    ${url}    ${browser}    executable_path=${chromium_path}
+    Open Browser    ${url}    ${browser}    executable_path=${chromium_path}    options=headless
     maximize browser window
     Log To Console    Exécution de test démarrée sur ${browser}
 

@@ -1,5 +1,5 @@
 *** Settings ***
-Library           SeleniumLibrary   run_on_failure=Capture Page Screenshot  timeout=0:00:20  implicit_wait=0:00:20
+Library           SeleniumLibrary
 
 Resource    ../../tests/resources/test_properties.robot
 
